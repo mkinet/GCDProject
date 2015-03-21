@@ -61,3 +61,5 @@ data <- cbind(subject,y,X)
 ## 5)
 # using the aggregate function :
 cdata <- aggregate(data[,3:81], by=data[c("subject","activity")], FUN=mean)
+
+write.table(cdata, "submit.txt", row.names=FALSE)
